@@ -73,7 +73,7 @@ function findWordOnFloor(word, compatibilityObject, floorsArray) {
         if(compatibilityObject[i].word === word) {
             floorsArray.push(word);
             for(let j = 0; j < compatibilityObject[i].comp.length; j++) {
-                floorsArray = Array.from(new Set(floorsArray.concat(findWordOnFloor(compatibilityObject[i].comp[j], compatibilityObject, floorsArray))));
+                floorsArray = Array.from(new Set(floorsArray.concat(findWordOnFloor(compatibilityObject[i].comp[j], compatibilityObject, floorsArray)).sort((a, b) => b.length - a.length)));
             }
 
             break;
