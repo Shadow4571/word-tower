@@ -14,8 +14,9 @@ body {
     overflow: auto;
     background: aliceblue;
     font-size: 12pt;
-    text-align: justify;
-    text-align-last: justify;
+    text-space: 10px;
+    text-align: left;
+    text-align-last: left;
 }
 
 #textArea {
