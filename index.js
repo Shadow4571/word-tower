@@ -64,7 +64,7 @@ function beginFirstGame() {
 }
 
 /**
- * Функция строит башню из максимального количества символов и выводин на окно вывода
+ * Функция строит башню из максимального количества символов и выводит на окно вывода
  */
 function beginSecondGame() {
     let textArray = getTextArrayFromBox();
