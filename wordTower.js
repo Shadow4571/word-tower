@@ -52,6 +52,8 @@ function getWordCompatibility(textArray) {
                 }
             }
         }
+
+        wordCompatibility[wordCompatibility.length - 1].comp.sort((a, b) => b.length - a.length);
     }
 
     return wordCompatibility;
@@ -114,10 +116,10 @@ function getFloors(wordCompatibility) {
 function checkFloors(floors) {
     for(let i = 0; i < floors.length; i++) {
         for(let j = 0; j < floors[i].length - 1; j++) {
-            let collision = canWordCollision(floors[i][j], floors[i][j + 1])
+            let collision = canWordCollision(floors[i][j], floors[i][j + 1]);
             if(!collision.canCollision) {
-                floors[i].splice(j + 1);
-                j--;
+                floors[i].splice(j + 1, 1);
+                j = 0;
             }
         }
     }

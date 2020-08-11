@@ -26,6 +26,7 @@ function setTextToBox(str) {
  */
 function clearTextBox() {
     let table = document.getElementById("tableTower");
+    table.classList.remove("tableSmall");
     while(table.firstChild) {
         table.removeChild(table.firstChild);
     }
@@ -40,6 +41,9 @@ function setTower(tower) {
     let maxChars = tower[0].length;
     let maxRows = tower.length;
     let table = document.getElementById("tableTower");
+
+    if(tower.length > 16)
+        table.classList.add("tableSmall");
 
     for(let i = maxRows - 1; i > -1; i--) {
         let row = document.createElement("tr");

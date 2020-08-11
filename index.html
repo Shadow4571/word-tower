@@ -8,16 +8,16 @@
     <script type="text/javascript" src="wordTower.js"></script>
 
 </head>
-<body onload="" id="main">
+<body id="main">
+    <h1>TOWER</h1>
     <div id="textTower">
         <table id="tableTower">
-
         </table>
     </div>
-    <textarea placeholder="Введите слова через пробел" id="textArea" name="textBox"></textarea>
+    <textarea placeholder="Введите слова через пробел" id="textArea" name="textBox" class="text"></textarea>
     <div class="buttonsBox">
-        <button class="buttonGame left" form="textArea" onclick="beginFirstGame()">Максимально высокая башня</button>
-        <button class="buttonGame right" form="textArea" onclick="beginSecondGame()">Самое большое количество букв</button>
+        <button class="buttonGame left" form="textArea" onclick="beginFirstGame()">Высота башни</button>
+        <button class="buttonGame right" form="textArea" onclick="beginSecondGame()">Максимум букв</button>
     </div>
 </body>
 </html>

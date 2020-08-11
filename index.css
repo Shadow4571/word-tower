@@ -1,18 +1,28 @@
 body {
     margin: 0px;
-    background: #f8e6ce;
-    font-family: Calibri;
+    background: #ffffff;
+    font-family: Calibri, serif;
     color: #191919;
 }
 
-table {
-    width: 100%;
-    height: 100%;
-    font-size: 12pt;
+h1 {
+    top: 20px;
+    margin: auto;
+    text-align: center;
+    font-size: 48pt;
+    color: #dfdde8;
 }
 
-table tr {
+table {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 18pt;
+    font-family: "Franklin Gothic Heavy", serif;
+}
 
+.tableSmall {
+    font-size: 10pt;
 }
 
 table td {
@@ -20,35 +30,34 @@ table td {
     text-align-last: center;
     horiz-align: center;
     vertical-align: center;
-
-    border-left: 1px dashed #77583c;
-    border-top: 1px dotted #77583c;
 }
 
 #textTower {
     position: absolute;
-    overflow: paged-y;
+    overflow: auto;
     left: 30%;
     right: 30%;
-    top: 50px;
+    top: 100px;
     height: 500px;
-    overflow: hidden;
-    background: #fdf6ec;
-    border: 2px inset #77583c;
+    border-top: 2px solid #dfdde8;
+    border-bottom: 2px solid #dfdde8;
 }
 
-#textArea {
-    border: none;
-    margin: 0px;
+.text, #textArea {
+    margin: 0;
     position: absolute;
     left: 30%;
     right: 30%;
-    top: 600px;
-    height: 100px;
+    top: 650px;
+    height: 50px;
     width: 39.7%;
     resize: none;
     overflow: hidden;
-    background: #fffaba;
+    border: 2px solid #dfdde8;
+}
+
+.text:focus, #textArea:focus {
+    outline: 2px solid #a996c4;
 }
 
 .buttonsBox {
@@ -63,13 +72,21 @@ table td {
     position: relative;
     width: 45%;
     height: 50px;
-    border: 0;
-    background-color: #f7b9ba;
+    background-color: #ffffff;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 5px inset #a996c4;
+    transition: background-color 0.3s ease-out 0.15s;
 }
 
 .buttonGame:hover {
-    color: #3f0311;
-    background-color: #df9a90;
+    background-color: #dfdde8;
+}
+
+.buttonGame:focus {
+    background-color: #927aa7;
+    outline: 2px solid #a996c4;
 }
 
 .buttonGame.left {
