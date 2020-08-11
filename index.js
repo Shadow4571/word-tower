@@ -13,36 +13,46 @@ function getTextArrayFromBox() {
  * @param str
  */
 function setTextToBox(str) {
-    document.getElementById("textTower").innerText = str;
+    clearTextBox();
+    let table = document.getElementById("tableTower");
+    let row = document.createElement("tr"), cell = document.createElement("td");
+    cell.innerText = str;
+    row.appendChild(cell);
+    table.appendChild(row);
 }
 
 /**
  * Функция очищает окно вывода
  */
 function clearTextBox() {
-    document.getElementById("textTower").innerText = " ";
+    let table = document.getElementById("tableTower");
+    while(table.firstChild) {
+        table.removeChild(table.firstChild);
+    }
 }
 
 /**
- * Функция формирует башню из слов. Принимает массив слов, возвращает строку
+ * Функция формирует башню из слов. Принимает массив слов, после чего создает таблицу и устанавливает ее для пользователя
  * @param tower
  * @returns {string}
  */
-function getMessage(tower) {
-    let message = "";
+function setTower(tower) {
+    let maxChars = tower[0].length;
+    let maxRows = tower.length;
+    let table = document.getElementById("tableTower");
 
-    for(let i = tower.length - 1; i > -1; i--) {
-        for(let char of tower[i]) {
-            if(char === " ") {
-                message += "\u2007" + "\u2003";
-            } else {
-                message += char + "\u2003";
+    for(let i = maxRows - 1; i > -1; i--) {
+        let row = document.createElement("tr");
+        for(let j = 0; j < maxChars; j++) {
+            let cell = document.createElement("td");
+            if(j < tower[i].length) {
+                cell.innerText = tower[i][j] !== " " ? tower[i][j] : "";
             }
-        }
-        message += "\n";
-    }
 
-    return message;
+            row.appendChild(cell);
+        }
+        table.appendChild(row);
+    }
 }
 
 /**
@@ -58,9 +68,7 @@ function beginFirstGame() {
     }
 
     let tower = getWordTower(textArray);
-    let message = getMessage(tower);
-
-    setTextToBox(message);
+    setTower(tower);
 }
 
 /**
@@ -76,7 +84,5 @@ function beginSecondGame() {
     }
 
     let tower = getMaxCharTower(textArray);
-    let message = getMessage(tower);
-
-    setTextToBox(message);
+    setTower(tower);
 }

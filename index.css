@@ -1,7 +1,28 @@
 body {
     margin: 0px;
-    background: #282b2f;
+    background: #f8e6ce;
     font-family: Calibri;
+    color: #191919;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    font-size: 12pt;
+}
+
+table tr {
+
+}
+
+table td {
+    text-align: center;
+    text-align-last: center;
+    horiz-align: center;
+    vertical-align: center;
+
+    border-left: 1px dashed #77583c;
+    border-top: 1px dotted #77583c;
 }
 
 #textTower {
@@ -11,12 +32,9 @@ body {
     right: 30%;
     top: 50px;
     height: 500px;
-    overflow: auto;
-    background: aliceblue;
-    font-size: 12pt;
-    text-space: 10px;
-    text-align: left;
-    text-align-last: left;
+    overflow: hidden;
+    background: #fdf6ec;
+    border: 2px inset #77583c;
 }
 
 #textArea {
@@ -30,7 +48,7 @@ body {
     width: 39.7%;
     resize: none;
     overflow: hidden;
-    background: aquamarine;
+    background: #fffaba;
 }
 
 .buttonsBox {
@@ -43,15 +61,21 @@ body {
 
 .buttonGame {
     position: relative;
-    float: left;
-    width: 50%;
+    width: 45%;
     height: 50px;
-    border-color: #282b2f;
-    color: #282b2f;
-    background-color: #eb2c7a;
+    border: 0;
+    background-color: #f7b9ba;
 }
 
 .buttonGame:hover {
     color: #3f0311;
-    background-color: #9c1b4a;
+    background-color: #df9a90;
+}
+
+.buttonGame.left {
+    float: left;
+}
+
+.buttonGame.right {
+    float: right;
 }

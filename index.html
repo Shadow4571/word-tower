@@ -9,11 +9,15 @@
 
 </head>
 <body onload="" id="main">
-    <div id="textTower"></div>
-    <textarea id="textArea" name="textBox"></textarea>
+    <div id="textTower">
+        <table id="tableTower">
+
+        </table>
+    </div>
+    <textarea placeholder="Введите слова через пробел" id="textArea" name="textBox"></textarea>
     <div class="buttonsBox">
-        <button class="buttonGame" form="textArea" onclick="beginFirstGame()">Максимально высокая башня</button>
-        <button class="buttonGame" form="textArea" onclick="beginSecondGame()">Самое большое количество букв</button>
+        <button class="buttonGame left" form="textArea" onclick="beginFirstGame()">Максимально высокая башня</button>
+        <button class="buttonGame right" form="textArea" onclick="beginSecondGame()">Самое большое количество букв</button>
     </div>
 </body>
 </html>
