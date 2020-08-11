@@ -5,7 +5,7 @@
  * @returns {string[]}
  */
 function getTextArrayFromBox() {
-    return document.getElementById("textArea").value.split(" ");
+    return document.getElementById("textArea").value.toLowerCase().split(" ");
 }
 
 /**
